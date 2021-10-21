@@ -1,0 +1,18 @@
+{% extends 'flatpages/default.html' %}
+
+{% block title %}
+Post details
+{% endblock title %}
+
+
+{% block content %}
+<h3>№ поста {{ post.id }}</h3>
+<p>{{ post.id }}</p>
+<h3>Заголовок</h3>
+<p>{{ post.title|default:"Без заголовка" }}</p>
+<h3>Дата публикации</h3>
+<p>{{ post.dateCreation|default:"Без даты"|date:'d.m.Y' }}</p>
+<h3>Текст поста</h3>
+<p>{{ post.text }}</p>
+
+{% endblock content %}

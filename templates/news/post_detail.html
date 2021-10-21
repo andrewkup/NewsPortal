@@ -1,0 +1,31 @@
+{% extends 'flatpages/default.html' %}
+
+{% block title %} Posts {% endblock title %}
+
+{% block content %}
+
+<table>
+    <thead>
+        <th>
+            Title
+        </th>
+        <th>
+            Pub date
+        </th>
+        <th>
+            Text
+        </th>
+    </thead>
+    <tr>
+        <td>
+            {{ post.title |title }}
+        </td>
+        <td>
+            {{ post.dateCreation | default:"Без даты"|date:'d.m.Y' }}
+        </td>
+        <td>
+            {{ post.text }}
+        </td>
+    </tr>
+</table>
+{% endblock content %}

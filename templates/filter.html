@@ -1,0 +1,12 @@
+{% extends 'flatpages/default.html' %}
+
+{% block title %} Filters {% endblock title %}
+
+{% block content %}
+
+<form method="GET">
+    {{ filter.form }} <!-- Форму от фильтров за нас сделает django. А вот кнопку, увы придётся делать самому -->
+    <input type="submit" value="Найти">
+</form>
+
+{% endblock content %}
